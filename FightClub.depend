@@ -102,10 +102,15 @@
 	"Revive.h"
 	<iostream>
 
-1774879285 source:c:\users\user\documents\oop\fightclub\src\characterfactory.cpp
+1774882885 source:c:\users\user\documents\oop\fightclub\src\characterfactory.cpp
 	"CharacterFactory.h"
 
-1774879285 c:\users\user\documents\oop\fightclub\include\characterfactory.h
+1774882939 c:\users\user\documents\oop\fightclub\include\characterfactory.h
+	"AICharacter.h"
+	"Fighter.h"
+	"Mage.h"
+	"Healer.h"
+	<iostream>
 
 1774881385 source:c:\users\user\documents\oop\fightclub\src\aicharacter.cpp
 	"AICharacter.h"
