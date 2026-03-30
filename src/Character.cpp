@@ -1,16 +1,16 @@
 #include "Character.h"
 
-Character::Character(std::string name, int hp, int xp, CharacterClass* chclass)
+Character::Character(std::string name, int hp,  CharacterClass* chclass)
 {
     _name = name;
     _hp = hp;
-    _xp = xp;
     _class = chclass;
+    _isAlive = true;
 }
 
 Character::~Character()
 {
-    //dtor
+    delete _class;
 }
 
 void Character::recieveEffect(EffectType type, int amount){
@@ -20,18 +20,37 @@ void Character::recieveEffect(EffectType type, int amount){
                 _hp -= amount;
                 break;
             case HEAL:
-                std::cout << _name << "'s HP got increased by " << amount << std::endl;
+                std::cout << _name << "'s HP got healed by " << amount << std::endl;
                 _hp += amount;
                 break;
+            case REVIVE:
+                if(_isAlive){
+                     std::cout << _name << " is alive but got Healed by " << amount << std::endl;
+                    _hp += amount;
+                } else {
+                    std::cout << _name << "got revived! his hp is now " << amount << std::endl;
+                    _hp += amount;
+                    _isAlive = true;
+                }
+                break;
+
         }
 
 }
 
 void Character::performSkill(ISkillUser* target){
     int index;
+    bool finished=false;
+    while(!finished){
     std::cout << "Give in which skill you want to use:" << std::endl;
     std::cin >> index;
+
+    if(index >= 2 || index < 0){
+        std::cout << "Index invalid please give 0 or 1 for the Skills" << std::endl;
+    } else {
     std::cout << _name << " uses ";
     _class->getSkills()[index]->use(target);
-
+    finished = true;
+    }
+    }
 }

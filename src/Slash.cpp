@@ -11,7 +11,7 @@ Slash::~Slash()
     //dtor
 }
 void Slash::use(ISkillUser* target){
-    std::cout << " Slash!" <<  std::endl;
+    std::cout << "Slash!" <<  std::endl;
     target->recieveEffect(DAMAGE,10);
 
 }

@@ -6,17 +6,18 @@
 class Character: public ISkillUser
 {
     public:
-        Character(std::string name, int hp, int xp, CharacterClass* chclass);
+        Character(std::string name, int hp, CharacterClass* chclass);
         virtual ~Character();
-        void performSkill(ISkillUser* user);
+        virtual void performSkill(ISkillUser* target);
         void recieveEffect(EffectType type, int amount) override;
     protected:
-
-    private:
         CharacterClass* _class;
-        int _hp;
-        int _xp;
         std::string _name;
+    private:
+
+        int _hp;
+        bool _isAlive;
+
 };
 
 #endif // CHARACTER_H

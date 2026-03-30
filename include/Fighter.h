@@ -2,8 +2,8 @@
 #define FIGHTER_H
 #include "CharacterClass.h"
 #include "ISkill.h"
+#include "Amputation.h"
 #include "Slash.h"
-#include "FireBall.h"
 
 class Fighter: public CharacterClass
 {

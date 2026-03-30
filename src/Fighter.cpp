@@ -3,12 +3,10 @@
 Fighter::Fighter()
 {
     skills[0] = new Slash();
-    skills[1] = new FireBall();
+    skills[1] = new Amputation();
 }
 
 Fighter::~Fighter()
 {
-    for (int i = 0; i < 2; i++) {
-        delete skills[i];
-    }
+
 }

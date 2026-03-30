@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1774800717 source:c:\users\user\documents\oop\fightclub\src\fighter.cpp
+1774880251 source:c:\users\user\documents\oop\fightclub\src\fighter.cpp
 	"Fighter.h"
 
-1774800670 c:\users\user\documents\oop\fightclub\include\fighter.h
+1774877670 c:\users\user\documents\oop\fightclub\include\fighter.h
 	"CharacterClass.h"
 	"ISkill.h"
+	"Amputation.h"
 	"Slash.h"
-	"FireBall.h"
 
 1774802121 c:\users\user\documents\oop\fightclub\include\characterclass.h
 	"ISkill.h"
@@ -14,7 +14,7 @@
 1774793886 c:\users\user\documents\oop\fightclub\include\iskill.h
 	"ISkillUser.h"
 
-1774791091 c:\users\user\documents\oop\fightclub\include\iskilluser.h
+1774877714 c:\users\user\documents\oop\fightclub\include\iskilluser.h
 
 1774790771 source:c:\users\user\documents\oop\fightclub\src\iskill.cpp
 	"ISkill.h"
@@ -22,36 +22,96 @@
 1774794413 source:c:\users\user\documents\oop\fightclub\src\iskilluser.cpp
 	"ISkillUser.h"
 
-1774802126 source:c:\users\user\documents\oop\fightclub\src\characterclass.cpp
+1774880270 source:c:\users\user\documents\oop\fightclub\src\characterclass.cpp
 	"CharacterClass.h"
 
 1774793460 c:\users\user\documents\oop\fightclub\include\icharacterclass.h
 	"ISkill.h"
 
-1774802399 source:c:\users\user\documents\oop\fightclub\src\character.cpp
+1774878612 source:c:\users\user\documents\oop\fightclub\src\character.cpp
 	"Character.h"
 
-1774802087 c:\users\user\documents\oop\fightclub\include\character.h
+1774881402 c:\users\user\documents\oop\fightclub\include\character.h
 	"CharacterClass.h"
 	"ISkillUser.h"
 	<iostream>
 
-1774802349 source:c:\users\user\documents\oop\fightclub\src\fireball.cpp
+1774878561 source:c:\users\user\documents\oop\fightclub\src\fireball.cpp
 	"FireBall.h"
 
 1774802269 c:\users\user\documents\oop\fightclub\include\fireball.h
 	"ISkill.h"
 	<iostream>
 
-1774802438 source:c:\users\user\documents\oop\fightclub\src\slash.cpp
+1774878586 source:c:\users\user\documents\oop\fightclub\src\slash.cpp
 	"Slash.h"
 	<iostream>
 
 1774800874 c:\users\user\documents\oop\fightclub\include\slash.h
 	"ISkill.h"
 
-1774802070 source:c:\users\user\documents\oop\fightclub\main.cpp
+1774881444 source:c:\users\user\documents\oop\fightclub\main.cpp
 	<iostream>
 	"Character.h"
+	"AICharacter.h"
 	"Fighter.h"
+	"Mage.h"
+	"Healer.h"
+
+1774878540 source:c:\users\user\documents\oop\fightclub\src\heal.cpp
+	"Heal.h"
+	<iostream>
+
+1774875015 c:\users\user\documents\oop\fightclub\include\heal.h
+	"ISkill.h"
+
+1774880308 source:c:\users\user\documents\oop\fightclub\src\mage.cpp
+	"Mage.h"
+
+1774876258 c:\users\user\documents\oop\fightclub\include\mage.h
+	"CharacterClass.h"
+	"FireBall.h"
+	"Lightning.h"
+
+1774876182 c:\users\user\documents\oop\fightclub\include\lightning.h
+	"ISkill.h"
+
+1774878569 source:c:\users\user\documents\oop\fightclub\src\lightning.cpp
+	"Lightning.h"
+	<iostream>
+
+1774877615 c:\users\user\documents\oop\fightclub\include\amputation.h
+	"ISkill.h"
+
+1774878577 source:c:\users\user\documents\oop\fightclub\src\amputation.cpp
+	"Amputation.h"
+	<iostream>
+
+1774880314 source:c:\users\user\documents\oop\fightclub\src\healer.cpp
+	"Healer.h"
+
+1774878138 c:\users\user\documents\oop\fightclub\include\healer.h
+	"CharacterClass.h"
+	"Heal.h"
+	"Revive.h"
+
+1774877788 c:\users\user\documents\oop\fightclub\include\revive.h
+	"ISkill.h"
+
+1774878573 source:c:\users\user\documents\oop\fightclub\src\revive.cpp
+	"Revive.h"
+	<iostream>
+
+1774879285 source:c:\users\user\documents\oop\fightclub\src\characterfactory.cpp
+	"CharacterFactory.h"
+
+1774879285 c:\users\user\documents\oop\fightclub\include\characterfactory.h
+
+1774881385 source:c:\users\user\documents\oop\fightclub\src\aicharacter.cpp
+	"AICharacter.h"
+	<time.h>
+
+1774880930 c:\users\user\documents\oop\fightclub\include\aicharacter.h
+	<iostream>
+	"Character.h"
 

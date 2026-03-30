@@ -3,7 +3,8 @@
 
 enum EffectType {
     DAMAGE,
-    HEAL
+    HEAL,
+    REVIVE
 };
 class ISkillUser
 {

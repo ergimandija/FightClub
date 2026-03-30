@@ -7,7 +7,9 @@ CharacterClass::CharacterClass()
 
 CharacterClass::~CharacterClass()
 {
-    //dtor
+    for (int i = 0; i < 2; i++) {
+        delete skills[i];
+    }
 }
 
 
