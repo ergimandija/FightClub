@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1774800717 source:c:\users\user\documents\oop\fightclub\src\fighter.cpp
+	"Fighter.h"
+
+1774800670 c:\users\user\documents\oop\fightclub\include\fighter.h
+	"CharacterClass.h"
+	"ISkill.h"
+	"Slash.h"
+	"FireBall.h"
+
+1774802121 c:\users\user\documents\oop\fightclub\include\characterclass.h
+	"ISkill.h"
+
+1774793886 c:\users\user\documents\oop\fightclub\include\iskill.h
+	"ISkillUser.h"
+
+1774791091 c:\users\user\documents\oop\fightclub\include\iskilluser.h
+
+1774790771 source:c:\users\user\documents\oop\fightclub\src\iskill.cpp
+	"ISkill.h"
+
+1774794413 source:c:\users\user\documents\oop\fightclub\src\iskilluser.cpp
+	"ISkillUser.h"
+
+1774802126 source:c:\users\user\documents\oop\fightclub\src\characterclass.cpp
+	"CharacterClass.h"
+
+1774793460 c:\users\user\documents\oop\fightclub\include\icharacterclass.h
+	"ISkill.h"
+
+1774802399 source:c:\users\user\documents\oop\fightclub\src\character.cpp
+	"Character.h"
+
+1774802087 c:\users\user\documents\oop\fightclub\include\character.h
+	"CharacterClass.h"
+	"ISkillUser.h"
+	<iostream>
+
+1774802349 source:c:\users\user\documents\oop\fightclub\src\fireball.cpp
+	"FireBall.h"
+
+1774802269 c:\users\user\documents\oop\fightclub\include\fireball.h
+	"ISkill.h"
+	<iostream>
+
+1774802438 source:c:\users\user\documents\oop\fightclub\src\slash.cpp
+	"Slash.h"
+	<iostream>
+
+1774800874 c:\users\user\documents\oop\fightclub\include\slash.h
+	"ISkill.h"
+
+1774802070 source:c:\users\user\documents\oop\fightclub\main.cpp
+	<iostream>
+	"Character.h"
+	"Fighter.h"
+

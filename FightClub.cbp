@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,9 +33,23 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
-			<Option compilerVar="CC" />
+		<Unit filename="include/Character.h" />
+		<Unit filename="include/CharacterClass.h" />
+		<Unit filename="include/Fighter.h" />
+		<Unit filename="include/FireBall.h" />
+		<Unit filename="include/ISkill.h" />
+		<Unit filename="include/ISkillUser.h" />
+		<Unit filename="include/Slash.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
 		</Unit>
+		<Unit filename="src/Character.cpp" />
+		<Unit filename="src/CharacterClass.cpp" />
+		<Unit filename="src/Fighter.cpp" />
+		<Unit filename="src/FireBall.cpp" />
+		<Unit filename="src/ISkill.cpp" />
+		<Unit filename="src/ISkillUser.cpp" />
+		<Unit filename="src/Slash.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
