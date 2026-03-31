@@ -11,10 +11,11 @@
 1774964831 c:\users\user\documents\oop\fightclub\include\characterclass.h
 	"ISkill.h"
 
-1774908876 c:\users\user\documents\oop\fightclub\include\iskill.h
+1774982275 c:\users\user\documents\oop\fightclub\include\iskill.h
+	"BattleContext.h"
 	"ISkillUser.h"
 
-1774877714 c:\users\user\documents\oop\fightclub\include\iskilluser.h
+1774984256 c:\users\user\documents\oop\fightclub\include\iskilluser.h
 
 1774790771 source:c:\users\user\documents\oop\fightclub\src\iskill.cpp
 	"ISkill.h"
@@ -28,38 +29,40 @@
 1774793460 c:\users\user\documents\oop\fightclub\include\icharacterclass.h
 	"ISkill.h"
 
-1774964920 source:c:\users\user\documents\oop\fightclub\src\character.cpp
+1774982022 source:c:\users\user\documents\oop\fightclub\src\character.cpp
 	"Character.h"
 
-1774964440 c:\users\user\documents\oop\fightclub\include\character.h
+1774984234 c:\users\user\documents\oop\fightclub\include\character.h
 	"CharacterClass.h"
 	"ISkillUser.h"
 	<iostream>
+	"BattleContext.h"
 
-1774908876 source:c:\users\user\documents\oop\fightclub\src\fireball.cpp
+1774984123 source:c:\users\user\documents\oop\fightclub\src\fireball.cpp
 	"FireBall.h"
 
-1774908876 c:\users\user\documents\oop\fightclub\include\fireball.h
+1774970191 c:\users\user\documents\oop\fightclub\include\fireball.h
 	"ISkill.h"
 	<iostream>
 
-1774908876 source:c:\users\user\documents\oop\fightclub\src\slash.cpp
+1774984149 source:c:\users\user\documents\oop\fightclub\src\slash.cpp
 	"Slash.h"
 	<iostream>
 
-1774908876 c:\users\user\documents\oop\fightclub\include\slash.h
+1774970176 c:\users\user\documents\oop\fightclub\include\slash.h
 	"ISkill.h"
 
-1774965293 source:c:\users\user\documents\oop\fightclub\main.cpp
+1774982232 source:c:\users\user\documents\oop\fightclub\main.cpp
 	<iostream>
 	"CharacterFactory.h"
 	"Team.h"
+	<time.h>
 
-1774908876 source:c:\users\user\documents\oop\fightclub\src\heal.cpp
+1774984047 source:c:\users\user\documents\oop\fightclub\src\heal.cpp
 	"Heal.h"
 	<iostream>
 
-1774908876 c:\users\user\documents\oop\fightclub\include\heal.h
+1774970157 c:\users\user\documents\oop\fightclub\include\heal.h
 	"ISkill.h"
 
 1774880308 source:c:\users\user\documents\oop\fightclub\src\mage.cpp
@@ -70,17 +73,17 @@
 	"FireBall.h"
 	"Lightning.h"
 
-1774908876 c:\users\user\documents\oop\fightclub\include\lightning.h
+1774970128 c:\users\user\documents\oop\fightclub\include\lightning.h
 	"ISkill.h"
 
-1774908876 source:c:\users\user\documents\oop\fightclub\src\lightning.cpp
+1774984137 source:c:\users\user\documents\oop\fightclub\src\lightning.cpp
 	"Lightning.h"
 	<iostream>
 
-1774908876 c:\users\user\documents\oop\fightclub\include\amputation.h
+1774970700 c:\users\user\documents\oop\fightclub\include\amputation.h
 	"ISkill.h"
 
-1774908876 source:c:\users\user\documents\oop\fightclub\src\amputation.cpp
+1774984118 source:c:\users\user\documents\oop\fightclub\src\amputation.cpp
 	"Amputation.h"
 	<iostream>
 
@@ -92,10 +95,10 @@
 	"Heal.h"
 	"Revive.h"
 
-1774908876 c:\users\user\documents\oop\fightclub\include\revive.h
+1774970171 c:\users\user\documents\oop\fightclub\include\revive.h
 	"ISkill.h"
 
-1774908876 source:c:\users\user\documents\oop\fightclub\src\revive.cpp
+1774984173 source:c:\users\user\documents\oop\fightclub\src\revive.cpp
 	"Revive.h"
 	<iostream>
 
@@ -109,18 +112,24 @@
 	"Healer.h"
 	<iostream>
 
-1774881385 source:c:\users\user\documents\oop\fightclub\src\aicharacter.cpp
+1774982115 source:c:\users\user\documents\oop\fightclub\src\aicharacter.cpp
 	"AICharacter.h"
-	<time.h>
 
-1774880930 c:\users\user\documents\oop\fightclub\include\aicharacter.h
+1774982000 c:\users\user\documents\oop\fightclub\include\aicharacter.h
 	<iostream>
 	"Character.h"
 
-1774965379 c:\users\user\documents\oop\fightclub\include\team.h
+1774983952 c:\users\user\documents\oop\fightclub\include\team.h
 	<iostream>
-	"Character.h"
+	"ISkillUser.h"
 
 1774965507 source:c:\users\user\documents\oop\fightclub\src\team.cpp
 	"Team.h"
+
+1774983940 c:\users\user\documents\oop\fightclub\include\battlecontext.h
+	"Team.h"
+	"ISkillUser.h"
+
+1774972309 source:c:\users\user\documents\oop\fightclub\src\battlecontext.cpp
+	"BattleContext.h"
 

@@ -9,11 +9,11 @@ AICharacter::~AICharacter()
     //dtor
 }
 
-void AICharacter::performSkill(ISkillUser* target){
+void AICharacter::performSkill(BattleContext& ctx){
 
     int index =  rand() % 2;
 
     std::cout << _name << " uses ";
-    _class->getSkills()[index]->use(target);
+    _class->getSkills()[index]->use(this,ctx);
 
 }

@@ -11,18 +11,21 @@ Team::~Team()
     //dtor
 }
 
+Team::Team(){
 
-void Team::addCharacter(Character* character){
+}
+
+void Team::addCharacter(ISkillUser* character){
     _members[_memberCounter] = character;
     _memberCounter++;
 }
 
-Character* Team::getMember(int index) const {
-    return _members[i];
+ISkillUser* Team::getMember(int index) const {
+    return _members[index];
 }
 
-Character** Team::getAliveMembers(int& outCount) const{
-        Character** aliveMembers = new Character*[3];
+ISkillUser** Team::getAliveMembers(int& outCount) const{
+        ISkillUser** aliveMembers = new ISkillUser*[3];
         int counter=0;
         for(int i=0;i<_memberCounter;i++){
             if(_members[i]->isAlive()){

@@ -16,7 +16,7 @@ void Revive::use(ISkillUser* user,BattleContext& ctx) {
     Team enemyTeam = ctx.getAlliesOf(user);
     int aliveCounter=0;
     ISkillUser** targetTeam = enemyTeam.getAliveMembers(aliveCounter);
-    ISkillUser* target = targetTeam[rand() % aliveCounter]
+    ISkillUser* target = targetTeam[rand() % aliveCounter];
     target->recieveEffect(REVIVE,20);
-
+    delete[] targetTeam;
 }

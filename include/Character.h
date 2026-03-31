@@ -12,7 +12,7 @@ class Character: public ISkillUser
         virtual ~Character();
         virtual void performSkill(BattleContext& ctx);
         void recieveEffect(EffectType type, int amount) override;
-        bool isAlive() const;
+        bool isAlive() const override;
         std::string getName() const;
     protected:
         CharacterClass* _class;

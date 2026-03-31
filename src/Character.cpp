@@ -38,7 +38,7 @@ void Character::recieveEffect(EffectType type, int amount){
 
 }
 
-void Character::performSkill(ISkillUser* target){
+void Character::performSkill(BattleContext& ctx){
     int index;
     bool finished=false;
     while(!finished){
@@ -49,7 +49,7 @@ void Character::performSkill(ISkillUser* target){
         std::cout << "Index invalid please give 0 or 1 for the Skills" << std::endl;
     } else {
     std::cout << _name << " uses ";
-    _class->getSkills()[index]->use(target);
+    _class->getSkills()[index]->use(this,ctx);
     finished = true;
     }
     }

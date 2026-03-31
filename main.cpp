@@ -17,10 +17,8 @@ int main() {
     team->addCharacter(fighter2);
     team->addCharacter(fighter3);
     int memberCounter;
-    Character** teamMembers = team->getAliveMembers(memberCounter);
-    for(int i=0;i < memberCounter; i++){
-        std::cout << teamMembers[i]->getName() << std::endl;
-    }
+    ISkillUser** teamMembers = team->getAliveMembers(memberCounter);
+
     delete[] teamMembers;
     return 0;
 

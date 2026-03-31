@@ -8,7 +8,7 @@ class AICharacter: public Character
     public:
         AICharacter(std::string name, int hp, CharacterClass* chclass);
         virtual ~AICharacter();
-        void performSkill(ISkillUser* target) override;
+        void performSkill(BattleContext& ctx) override;
     protected:
 
     private:

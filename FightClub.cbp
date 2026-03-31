@@ -35,6 +35,7 @@
 		</Compiler>
 		<Unit filename="include/AICharacter.h" />
 		<Unit filename="include/Amputation.h" />
+		<Unit filename="include/BattleContext.h" />
 		<Unit filename="include/Character.h" />
 		<Unit filename="include/CharacterClass.h" />
 		<Unit filename="include/CharacterFactory.h" />
@@ -54,6 +55,7 @@
 		</Unit>
 		<Unit filename="src/AICharacter.cpp" />
 		<Unit filename="src/Amputation.cpp" />
+		<Unit filename="src/BattleContext.cpp" />
 		<Unit filename="src/Character.cpp" />
 		<Unit filename="src/CharacterClass.cpp" />
 		<Unit filename="src/CharacterFactory.cpp" />

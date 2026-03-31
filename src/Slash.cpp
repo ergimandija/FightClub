@@ -17,5 +17,5 @@ void Slash::use(ISkillUser* user,BattleContext& ctx){
     ISkillUser** targetTeam = enemyTeam.getAliveMembers(aliveCounter);
     ISkillUser* target = targetTeam[rand() % aliveCounter];
     target->recieveEffect(DAMAGE,10);
-
+    delete[] targetTeam;
 }
