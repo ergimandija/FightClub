@@ -48,6 +48,7 @@
 		<Unit filename="include/Mage.h" />
 		<Unit filename="include/Revive.h" />
 		<Unit filename="include/Slash.h" />
+		<Unit filename="include/Team.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -66,6 +67,7 @@
 		<Unit filename="src/Mage.cpp" />
 		<Unit filename="src/Revive.cpp" />
 		<Unit filename="src/Slash.cpp" />
+		<Unit filename="src/Team.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
