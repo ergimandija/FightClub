@@ -33,22 +33,38 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/AICharacter.h" />
+		<Unit filename="include/Amputation.h" />
 		<Unit filename="include/Character.h" />
 		<Unit filename="include/CharacterClass.h" />
+		<Unit filename="include/CharacterFactory.h" />
 		<Unit filename="include/Fighter.h" />
 		<Unit filename="include/FireBall.h" />
+		<Unit filename="include/Heal.h" />
+		<Unit filename="include/Healer.h" />
 		<Unit filename="include/ISkill.h" />
 		<Unit filename="include/ISkillUser.h" />
+		<Unit filename="include/Lightning.h" />
+		<Unit filename="include/Mage.h" />
+		<Unit filename="include/Revive.h" />
 		<Unit filename="include/Slash.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="src/AICharacter.cpp" />
+		<Unit filename="src/Amputation.cpp" />
 		<Unit filename="src/Character.cpp" />
 		<Unit filename="src/CharacterClass.cpp" />
+		<Unit filename="src/CharacterFactory.cpp" />
 		<Unit filename="src/Fighter.cpp" />
 		<Unit filename="src/FireBall.cpp" />
+		<Unit filename="src/Heal.cpp" />
+		<Unit filename="src/Healer.cpp" />
 		<Unit filename="src/ISkill.cpp" />
 		<Unit filename="src/ISkillUser.cpp" />
+		<Unit filename="src/Lightning.cpp" />
+		<Unit filename="src/Mage.cpp" />
+		<Unit filename="src/Revive.cpp" />
 		<Unit filename="src/Slash.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

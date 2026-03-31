@@ -10,6 +10,8 @@ class Character: public ISkillUser
         virtual ~Character();
         virtual void performSkill(ISkillUser* target);
         void recieveEffect(EffectType type, int amount) override;
+        bool isAlive() const;
+        std::string getName() const;
     protected:
         CharacterClass* _class;
         std::string _name;

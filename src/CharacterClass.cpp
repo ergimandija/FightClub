@@ -13,6 +13,6 @@ CharacterClass::~CharacterClass()
 }
 
 
-ISkill** CharacterClass::getSkills(){
+ISkill* const* CharacterClass::getSkills() const {
     return skills;
 }

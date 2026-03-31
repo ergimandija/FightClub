@@ -7,7 +7,7 @@ class CharacterClass
 public:
     CharacterClass();
     virtual ~CharacterClass();
-    ISkill** getSkills();
+    ISkill* const* getSkills() const;
 
 
 protected:

@@ -54,3 +54,13 @@ void Character::performSkill(ISkillUser* target){
     }
     }
 }
+
+
+bool Character::isAlive() const{
+    return _isAlive;
+}
+
+
+std::string Character::getName() const {
+     return _name;
+}
