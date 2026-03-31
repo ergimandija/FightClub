@@ -7,7 +7,7 @@ class Revive: public ISkill
     public:
         Revive();
         virtual ~Revive();
-        void use(ISkillUser* target) override;
+        void use(ISkillUser* user,BattleContext& ctx) override;
 
     protected:
 

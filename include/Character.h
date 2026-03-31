@@ -3,12 +3,14 @@
 #include "CharacterClass.h"
 #include "ISkillUser.h"
 #include <iostream>
+#include "BattleContext.h"
+
 class Character: public ISkillUser
 {
     public:
         Character(std::string name, int hp, CharacterClass* chclass);
         virtual ~Character();
-        virtual void performSkill(ISkillUser* target);
+        virtual void performSkill(BattleContext& ctx);
         void recieveEffect(EffectType type, int amount) override;
         bool isAlive() const;
         std::string getName() const;

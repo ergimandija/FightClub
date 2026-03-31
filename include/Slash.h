@@ -7,7 +7,7 @@ class Slash:public ISkill
     public:
         Slash();
         virtual ~Slash();
-        void use(ISkillUser* target) override;
+        void use(ISkillUser* user,BattleContext& ctx) override;
     protected:
 
     private:

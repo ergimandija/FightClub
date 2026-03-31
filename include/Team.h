@@ -10,7 +10,7 @@ class Team
         void addCharacter(Character* character);
         Character** getAliveMembers(int& outCount) const;
         int getMemberCounter() const;
-
+        Character* getMember(int index) const;
 
     protected:
 

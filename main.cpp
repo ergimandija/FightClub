@@ -1,11 +1,12 @@
 #include <iostream>
 #include "CharacterFactory.h"
 #include "Team.h"
+#include <time.h>
 
 using namespace std;
 
 int main() {
-
+    srand(time(NULL));
     Character* fighter1 = CharacterFactory::createCharacter("Ergi",MAGE,PLAYER);
     Character* fighter2 = CharacterFactory::createCharacter("Enemy",FIGHTER,AI);
     Character* fighter3 = CharacterFactory::createCharacter("Char",FIGHTER,AI);

@@ -7,7 +7,7 @@ class Lightning: public ISkill
     public:
         Lightning();
         virtual ~Lightning();
-        void use(ISkillUser* target) override;
+        void use(ISkillUser* user,BattleContext& ctx) override;
     protected:
 
     private:

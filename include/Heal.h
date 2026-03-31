@@ -7,7 +7,7 @@ class Heal: public ISkill
     public:
         Heal();
         virtual ~Heal();
-        void use(ISkillUser* target) override;
+        void use(ISkillUser* user,BattleContext& ctx) override;
     protected:
 
     private:

@@ -7,7 +7,7 @@ class Amputation: public ISkill
     public:
         Amputation();
         virtual ~Amputation();
-        void use(ISkillUser* target) override;
+        void use(ISkillUser* user,BattleContext& ctx) override;
     protected:
 
     private:

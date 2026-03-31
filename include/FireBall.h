@@ -8,7 +8,7 @@ class FireBall: public ISkill
     public:
         FireBall();
         virtual ~FireBall();
-        void use(ISkillUser* target) override;
+        void use(ISkillUser* user,BattleContext& ctx) override;
 
     protected:
 

@@ -17,6 +17,9 @@ void Team::addCharacter(Character* character){
     _memberCounter++;
 }
 
+Character* Team::getMember(int index) const {
+    return _members[i];
+}
 
 Character** Team::getAliveMembers(int& outCount) const{
         Character** aliveMembers = new Character*[3];
