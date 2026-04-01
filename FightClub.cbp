@@ -41,6 +41,8 @@
 		<Unit filename="include/CharacterFactory.h" />
 		<Unit filename="include/Fighter.h" />
 		<Unit filename="include/FireBall.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/GameRound.h" />
 		<Unit filename="include/Heal.h" />
 		<Unit filename="include/Healer.h" />
 		<Unit filename="include/ISkill.h" />
@@ -61,6 +63,8 @@
 		<Unit filename="src/CharacterFactory.cpp" />
 		<Unit filename="src/Fighter.cpp" />
 		<Unit filename="src/FireBall.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/GameRound.cpp" />
 		<Unit filename="src/Heal.cpp" />
 		<Unit filename="src/Healer.cpp" />
 		<Unit filename="src/ISkill.cpp" />

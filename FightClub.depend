@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1774880251 source:c:\users\user\documents\oop\fightclub\src\fighter.cpp
+1775064172 source:c:\users\user\documents\oop\fightclub\src\fighter.cpp
 	"Fighter.h"
 
 1774908876 c:\users\user\documents\oop\fightclub\include\fighter.h
@@ -15,7 +15,7 @@
 	"BattleContext.h"
 	"ISkillUser.h"
 
-1774984256 c:\users\user\documents\oop\fightclub\include\iskilluser.h
+1775065401 c:\users\user\documents\oop\fightclub\include\iskilluser.h
 
 1774790771 source:c:\users\user\documents\oop\fightclub\src\iskill.cpp
 	"ISkill.h"
@@ -29,10 +29,10 @@
 1774793460 c:\users\user\documents\oop\fightclub\include\icharacterclass.h
 	"ISkill.h"
 
-1774982022 source:c:\users\user\documents\oop\fightclub\src\character.cpp
+1775065410 source:c:\users\user\documents\oop\fightclub\src\character.cpp
 	"Character.h"
 
-1774984234 c:\users\user\documents\oop\fightclub\include\character.h
+1775065394 c:\users\user\documents\oop\fightclub\include\character.h
 	"CharacterClass.h"
 	"ISkillUser.h"
 	<iostream>
@@ -52,11 +52,10 @@
 1774970176 c:\users\user\documents\oop\fightclub\include\slash.h
 	"ISkill.h"
 
-1774982232 source:c:\users\user\documents\oop\fightclub\main.cpp
+1775064968 source:c:\users\user\documents\oop\fightclub\main.cpp
 	<iostream>
-	"CharacterFactory.h"
-	"Team.h"
 	<time.h>
+	"Game.h"
 
 1774984047 source:c:\users\user\documents\oop\fightclub\src\heal.cpp
 	"Heal.h"
@@ -65,7 +64,7 @@
 1774970157 c:\users\user\documents\oop\fightclub\include\heal.h
 	"ISkill.h"
 
-1774880308 source:c:\users\user\documents\oop\fightclub\src\mage.cpp
+1775064185 source:c:\users\user\documents\oop\fightclub\src\mage.cpp
 	"Mage.h"
 
 1774908876 c:\users\user\documents\oop\fightclub\include\mage.h
@@ -87,7 +86,7 @@
 	"Amputation.h"
 	<iostream>
 
-1774880314 source:c:\users\user\documents\oop\fightclub\src\healer.cpp
+1775064180 source:c:\users\user\documents\oop\fightclub\src\healer.cpp
 	"Healer.h"
 
 1774878138 c:\users\user\documents\oop\fightclub\include\healer.h
@@ -105,11 +104,12 @@
 1774883259 source:c:\users\user\documents\oop\fightclub\src\characterfactory.cpp
 	"CharacterFactory.h"
 
-1774883246 c:\users\user\documents\oop\fightclub\include\characterfactory.h
+1775065510 c:\users\user\documents\oop\fightclub\include\characterfactory.h
 	"AICharacter.h"
 	"Fighter.h"
 	"Mage.h"
 	"Healer.h"
+	"Custom.h"
 	<iostream>
 
 1774982115 source:c:\users\user\documents\oop\fightclub\src\aicharacter.cpp
@@ -119,17 +119,45 @@
 	<iostream>
 	"Character.h"
 
-1774983952 c:\users\user\documents\oop\fightclub\include\team.h
+1775064976 c:\users\user\documents\oop\fightclub\include\team.h
 	<iostream>
 	"ISkillUser.h"
 
-1774965507 source:c:\users\user\documents\oop\fightclub\src\team.cpp
+1775065298 source:c:\users\user\documents\oop\fightclub\src\team.cpp
 	"Team.h"
 
-1774983940 c:\users\user\documents\oop\fightclub\include\battlecontext.h
+1775056978 c:\users\user\documents\oop\fightclub\include\battlecontext.h
 	"Team.h"
 	"ISkillUser.h"
 
-1774972309 source:c:\users\user\documents\oop\fightclub\src\battlecontext.cpp
+1775057043 source:c:\users\user\documents\oop\fightclub\src\battlecontext.cpp
 	"BattleContext.h"
+
+1775065163 c:\users\user\documents\oop\fightclub\include\game.h
+	"Team.h"
+	"GameRound.h"
+	"CharacterFactory.h"
+
+1775057147 c:\users\user\documents\oop\fightclub\include\gameround.h
+	"Team.h"
+	"BattleContext.h"
+	"Character.h"
+
+1775062540 source:c:\users\user\documents\oop\fightclub\src\gameround.cpp
+	"GameRound.h"
+
+1775065155 source:c:\users\user\documents\oop\fightclub\src\game.cpp
+	"Game.h"
+
+1775064454 source:c:\users\user\documents\oop\fightclub\src\custom.cpp
+	"Custom.h"
+
+1775064999 c:\users\user\documents\oop\fightclub\include\custom.h
+	"Heal.h"
+	"Revive.h"
+	"FireBall.h"
+	"Lightning.h"
+	"Amputation.h"
+	"Slash.h"
+	"CharacterClass.h"
 

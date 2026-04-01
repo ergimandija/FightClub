@@ -1,5 +1,10 @@
 #include "BattleContext.h"
 
+BattleContext::BattleContext()
+{
+
+}
+
 BattleContext::BattleContext(Team& teamA, Team& teamB)
 {
     _teamA = teamA;

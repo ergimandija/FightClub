@@ -12,13 +12,20 @@ class Team
         ISkillUser** getAliveMembers(int& outCount) const;
         int getMemberCounter() const;
         ISkillUser* getMember(int index) const;
-
+        int getAliveMemberCounter();
+        std::string getTeamName() const;
+        void resetTeam();
+        void win();
+        void lose();
+        void showStats() const;
     protected:
 
     private:
         std::string _name;
         ISkillUser* _members[3];
         int _memberCounter;
+        int _wins;
+        int _losses;
 };
 
 #endif // TEAM_H

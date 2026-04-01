@@ -14,6 +14,9 @@ class Character: public ISkillUser
         void recieveEffect(EffectType type, int amount) override;
         bool isAlive() const override;
         std::string getName() const;
+        void setHP(int amount) override;
+        void setStatus(bool status) override;
+        int getHP() const override;
     protected:
         CharacterClass* _class;
         std::string _name;

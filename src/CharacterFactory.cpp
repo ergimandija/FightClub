@@ -22,6 +22,9 @@ Character* CharacterFactory::createCharacter(std::string name, ClassType classTy
     case MAGE:
         chclass= new Mage();
         break;
+    case CUSTOM:
+        chclass = new Custom();
+        break;
     }
 
     Character* newCharacter;

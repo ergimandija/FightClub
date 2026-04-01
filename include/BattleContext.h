@@ -6,7 +6,7 @@
 class BattleContext
 {
     public:
-
+        BattleContext();
         BattleContext(Team& teamA, Team& teamB);
         virtual ~BattleContext();
         Team& getAlliesOf(ISkillUser* user);

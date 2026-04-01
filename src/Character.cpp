@@ -18,6 +18,10 @@ void Character::recieveEffect(EffectType type, int amount){
             case DAMAGE:
                 std::cout << _name << " took " << amount << " Damage" << std::endl;
                 _hp -= amount;
+                if(_hp <= 0){
+                    std::cout << _name << " got defeated!" << std::endl;
+                    _isAlive = false;
+                }
                 break;
             case HEAL:
                 std::cout << _name << "'s HP got healed by " << amount << std::endl;
@@ -39,6 +43,7 @@ void Character::recieveEffect(EffectType type, int amount){
 }
 
 void Character::performSkill(BattleContext& ctx){
+    if(_isAlive){
     int index;
     bool finished=false;
     while(!finished){
@@ -53,6 +58,7 @@ void Character::performSkill(BattleContext& ctx){
     finished = true;
     }
     }
+    }
 }
 
 
@@ -63,4 +69,17 @@ bool Character::isAlive() const{
 
 std::string Character::getName() const {
      return _name;
+}
+
+
+void Character::setHP(int amount){
+        _hp = amount;
+}
+
+void Character::setStatus(bool status){
+        _isAlive = status;
+}
+
+int Character::getHP() const {
+     return _hp;
 }

@@ -4,6 +4,7 @@
 #include "Fighter.h"
 #include "Mage.h"
 #include  "Healer.h"
+#include "Custom.h"
 #include <iostream>
 
 enum CharacterType {
@@ -14,7 +15,8 @@ enum CharacterType {
 enum ClassType {
     FIGHTER,
     MAGE,
-    HEALER
+    HEALER,
+    CUSTOM
 };
 class CharacterFactory
 {
