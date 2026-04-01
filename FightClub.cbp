@@ -39,6 +39,7 @@
 		<Unit filename="include/Character.h" />
 		<Unit filename="include/CharacterClass.h" />
 		<Unit filename="include/CharacterFactory.h" />
+		<Unit filename="include/Custom.h" />
 		<Unit filename="include/Fighter.h" />
 		<Unit filename="include/FireBall.h" />
 		<Unit filename="include/Game.h" />
@@ -61,6 +62,7 @@
 		<Unit filename="src/Character.cpp" />
 		<Unit filename="src/CharacterClass.cpp" />
 		<Unit filename="src/CharacterFactory.cpp" />
+		<Unit filename="src/Custom.cpp" />
 		<Unit filename="src/Fighter.cpp" />
 		<Unit filename="src/FireBall.cpp" />
 		<Unit filename="src/Game.cpp" />
