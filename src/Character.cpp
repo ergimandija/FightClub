@@ -17,22 +17,28 @@ void Character::recieveEffect(EffectType type, int amount){
         switch(type) {
             case DAMAGE:
                 std::cout << _name << " took " << amount << " Damage" << std::endl;
-                _hp -= amount;
+
+                _hp = (_hp-amount>0)?_hp-amount:0;
                 if(_hp <= 0){
                     std::cout << _name << " got defeated!" << std::endl;
                     _isAlive = false;
                 }
                 break;
             case HEAL:
-                std::cout << _name << "'s HP got healed by " << amount << std::endl;
-                _hp += amount;
+                if(_hp == 100){
+                    std::cout << _name << " already has Full HP" << amount << std::endl;
+                } else {
+                    std::cout << _name << "'s HP got healed by " << amount << std::endl;
+                    _hp = (_hp+amount>100)?100:_hp+amount;
+                }
+
                 break;
             case REVIVE:
                 if(_isAlive){
                      std::cout << _name << " is alive but got Healed by " << amount << std::endl;
                     _hp += amount;
                 } else {
-                    std::cout << _name << "got revived! his hp is now " << amount << std::endl;
+                    std::cout << _name << " got revived! his hp is now " << amount << std::endl;
                     _hp += amount;
                     _isAlive = true;
                 }

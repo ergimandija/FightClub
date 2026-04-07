@@ -1,15 +1,12 @@
 #include "GameRound.h"
 
-GameRound::GameRound()
-{
-    //ctor
-}
+
 
 GameRound::GameRound(Team& teamA, Team& teamB)
+    : _teamA(teamA), _teamB(teamB)
 {
-    _teamA = teamA;
-    _teamB = teamB;
-    //ctor
+        _isFinished=false;
+
 }
 
 GameRound::~GameRound()
@@ -19,6 +16,11 @@ GameRound::~GameRound()
 
 bool GameRound::getGameStatus() const{
         return _isFinished;
+}
+
+
+void GameRound::setGameStatus(bool val) {
+        _isFinished = val;
 }
 void GameRound::executeTurn(){
     BattleContext ctx = BattleContext(_teamA,_teamB);
@@ -31,10 +33,9 @@ void GameRound::executeTurn(){
                     c->performSkill(ctx);
                 }
             } else {
-                _isFinished = true;
                 _teamB.lose();
                 _teamA.win();
-
+                _isFinished = true;
                 return;
             }
     }
@@ -47,6 +48,8 @@ void GameRound::executeTurn(){
             c->performSkill(ctx);
             }
               } else {
+                _teamB.win();
+                _teamA.lose();
                 _isFinished = true;
                 return;
             }

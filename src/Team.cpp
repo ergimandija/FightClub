@@ -10,7 +10,10 @@ Team::Team(std::string name)
 
 Team::~Team()
 {
-    //dtor
+//    for (int i = 0; i < _memberCounter; ++i) {
+//        delete _members[i];
+//        _members[i] = nullptr;
+//    }
 }
 
 Team::Team(){
@@ -30,7 +33,7 @@ ISkillUser* Team::getMember(int index) const {
     return _members[index];
 }
 
-ISkillUser** Team::getAliveMembers(int& outCount) const{
+ISkillUser** Team::getAliveMembers() const{
         ISkillUser** aliveMembers = new ISkillUser*[3];
         int counter=0;
         for(int i=0;i<_memberCounter;i++){
@@ -39,18 +42,21 @@ ISkillUser** Team::getAliveMembers(int& outCount) const{
                 counter++;
             }
         }
-        outCount = counter;
         return aliveMembers;
+
+}
+ISkillUser* const* Team::getMembers() const {
+     return _members;
 
 }
 
 void Team::win(){
     std::cout << _name << " won!" << std::endl;
-    _wins++;
+    _wins+=1;
 }
 
 void Team::lose() {
-    _losses++;
+    _losses+=1;
 }
 
 

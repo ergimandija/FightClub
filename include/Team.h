@@ -9,7 +9,8 @@ class Team
         Team();
         virtual ~Team();
         void addCharacter(ISkillUser* character);
-        ISkillUser** getAliveMembers(int& outCount) const;
+        ISkillUser** getAliveMembers() const;
+        ISkillUser* const* getMembers() const;
         int getMemberCounter() const;
         ISkillUser* getMember(int index) const;
         int getAliveMemberCounter();

@@ -12,10 +12,10 @@ Slash::~Slash()
 }
 void Slash::use(ISkillUser* user,BattleContext& ctx){
     std::cout << "Slash!" <<  std::endl;
-    Team enemyTeam = ctx.getEnemiesOf(user);
-    int aliveCounter=0;
-    ISkillUser** targetTeam = enemyTeam.getAliveMembers(aliveCounter);
-    ISkillUser* target = targetTeam[rand() % aliveCounter];
+    Team targetTeam = ctx.getEnemiesOf(user);
+    ISkillUser** targets = targetTeam.getAliveMembers();
+    int aliveCounter= targetTeam.getAliveMemberCounter();
+    ISkillUser* target = targets[rand() % aliveCounter];
     target->recieveEffect(DAMAGE,10);
-    delete[] targetTeam;
+    delete[] targets;
 }

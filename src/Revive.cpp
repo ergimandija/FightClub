@@ -13,10 +13,9 @@ Revive::~Revive()
 
 void Revive::use(ISkillUser* user,BattleContext& ctx) {
     std::cout << "Revive!" << std::endl;
-    Team enemyTeam = ctx.getAlliesOf(user);
-    int aliveCounter=0;
-    ISkillUser** targetTeam = enemyTeam.getAliveMembers(aliveCounter);
-    ISkillUser* target = targetTeam[rand() % aliveCounter];
+    Team targetTeam = ctx.getAlliesOf(user);
+    ISkillUser* const* targets = targetTeam.getMembers();
+    int counter = targetTeam.getMemberCounter();
+    ISkillUser* target = targets[rand() % counter];
     target->recieveEffect(REVIVE,20);
-    delete[] targetTeam;
 }

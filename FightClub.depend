@@ -29,7 +29,7 @@
 1774793460 c:\users\user\documents\oop\fightclub\include\icharacterclass.h
 	"ISkill.h"
 
-1775065410 source:c:\users\user\documents\oop\fightclub\src\character.cpp
+1775568617 source:c:\users\user\documents\oop\fightclub\src\character.cpp
 	"Character.h"
 
 1775065394 c:\users\user\documents\oop\fightclub\include\character.h
@@ -38,14 +38,14 @@
 	<iostream>
 	"BattleContext.h"
 
-1774984123 source:c:\users\user\documents\oop\fightclub\src\fireball.cpp
+1775424962 source:c:\users\user\documents\oop\fightclub\src\fireball.cpp
 	"FireBall.h"
 
 1774970191 c:\users\user\documents\oop\fightclub\include\fireball.h
 	"ISkill.h"
 	<iostream>
 
-1774984149 source:c:\users\user\documents\oop\fightclub\src\slash.cpp
+1775424989 source:c:\users\user\documents\oop\fightclub\src\slash.cpp
 	"Slash.h"
 	<iostream>
 
@@ -57,7 +57,7 @@
 	<time.h>
 	"Game.h"
 
-1774984047 source:c:\users\user\documents\oop\fightclub\src\heal.cpp
+1775424971 source:c:\users\user\documents\oop\fightclub\src\heal.cpp
 	"Heal.h"
 	<iostream>
 
@@ -75,14 +75,14 @@
 1774970128 c:\users\user\documents\oop\fightclub\include\lightning.h
 	"ISkill.h"
 
-1774984137 source:c:\users\user\documents\oop\fightclub\src\lightning.cpp
+1775424980 source:c:\users\user\documents\oop\fightclub\src\lightning.cpp
 	"Lightning.h"
 	<iostream>
 
 1774970700 c:\users\user\documents\oop\fightclub\include\amputation.h
 	"ISkill.h"
 
-1774984118 source:c:\users\user\documents\oop\fightclub\src\amputation.cpp
+1775424938 source:c:\users\user\documents\oop\fightclub\src\amputation.cpp
 	"Amputation.h"
 	<iostream>
 
@@ -97,11 +97,11 @@
 1774970171 c:\users\user\documents\oop\fightclub\include\revive.h
 	"ISkill.h"
 
-1774984173 source:c:\users\user\documents\oop\fightclub\src\revive.cpp
+1775424702 source:c:\users\user\documents\oop\fightclub\src\revive.cpp
 	"Revive.h"
 	<iostream>
 
-1774883259 source:c:\users\user\documents\oop\fightclub\src\characterfactory.cpp
+1775065471 source:c:\users\user\documents\oop\fightclub\src\characterfactory.cpp
 	"CharacterFactory.h"
 
 1775065510 c:\users\user\documents\oop\fightclub\include\characterfactory.h
@@ -119,11 +119,11 @@
 	<iostream>
 	"Character.h"
 
-1775064976 c:\users\user\documents\oop\fightclub\include\team.h
+1775424152 c:\users\user\documents\oop\fightclub\include\team.h
 	<iostream>
 	"ISkillUser.h"
 
-1775065298 source:c:\users\user\documents\oop\fightclub\src\team.cpp
+1775569538 source:c:\users\user\documents\oop\fightclub\src\team.cpp
 	"Team.h"
 
 1775056978 c:\users\user\documents\oop\fightclub\include\battlecontext.h
@@ -138,15 +138,15 @@
 	"GameRound.h"
 	"CharacterFactory.h"
 
-1775057147 c:\users\user\documents\oop\fightclub\include\gameround.h
+1775426451 c:\users\user\documents\oop\fightclub\include\gameround.h
 	"Team.h"
 	"BattleContext.h"
 	"Character.h"
 
-1775062540 source:c:\users\user\documents\oop\fightclub\src\gameround.cpp
+1775426540 source:c:\users\user\documents\oop\fightclub\src\gameround.cpp
 	"GameRound.h"
 
-1775065155 source:c:\users\user\documents\oop\fightclub\src\game.cpp
+1775426772 source:c:\users\user\documents\oop\fightclub\src\game.cpp
 	"Game.h"
 
 1775064454 source:c:\users\user\documents\oop\fightclub\src\custom.cpp

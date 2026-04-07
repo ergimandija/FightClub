@@ -11,11 +11,13 @@ class GameRound
         virtual ~GameRound();
         void executeTurn();
         bool getGameStatus() const;
+        void setGameStatus(bool val);
+
     protected:
 
     private:
-        Team _teamA;
-        Team _teamB;
+        Team& _teamA;
+        Team& _teamB;
         BattleContext _ctx;
         bool _isFinished;
 };

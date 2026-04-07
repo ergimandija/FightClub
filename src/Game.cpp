@@ -38,7 +38,7 @@ ClassType Game::pickClassType(){
     std::cout << "Character being created, please give in the class," << std::endl;
     std::cout << "(0->Fighter, 1->Mage,2->Healer ,3->Custom)" << std::endl;
     std::cin >> pick;
-    if(pick >= 0 || pick < 4){
+    if(pick >= 0 && pick < 4){
         break;
     }
     std::cout << "Input Invalid, try Again" << std::endl;
@@ -75,6 +75,7 @@ void Game::reset(){
             generateCharacters(_teamA,Game::pickTeamMode());
             break;
             } else if(choice == 0) {
+            _teamA.resetTeam();
             break;
             }
 
@@ -91,10 +92,13 @@ void Game::reset(){
             generateCharacters(_teamB,Game::pickTeamMode());
             break;
             } else if(choice == 0) {
+              _teamB.resetTeam();
               break;
             }
 
     }
+
+
 }
 void Game::start(){
     bool running = true;
