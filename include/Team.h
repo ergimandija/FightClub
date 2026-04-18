@@ -18,6 +18,7 @@ class Team
         void resetTeam();
         void win();
         void lose();
+        void empty();
         void showStats() const;
     protected:
 

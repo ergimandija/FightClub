@@ -10,10 +10,14 @@ Team::Team(std::string name)
 
 Team::~Team()
 {
-//    for (int i = 0; i < _memberCounter; ++i) {
-//        delete _members[i];
-//        _members[i] = nullptr;
-//    }
+
+}
+
+void Team::empty() {
+    for (int i = 0; i < _memberCounter; ++i) {
+        delete _members[i];
+        _members[i] = nullptr;
+    }
 }
 
 Team::Team(){

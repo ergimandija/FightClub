@@ -100,14 +100,18 @@ void Game::reset(){
 
 
 }
+
+
 void Game::start(){
+
     bool running = true;
 
     while(running){
             GameRound round = GameRound(_teamA,_teamB);
-
+            sf::RenderWindow window(sf::VideoMode({1600, 800}), "Fight Club!");
+            window.display();
             while(!round.getGameStatus()){
-                round.executeTurn();
+                round.executeTurn(window);
             }
             std::cout << "--- Final Stats ---" << std::endl;
             _teamA.showStats();
@@ -123,6 +127,8 @@ void Game::start(){
                     this->reset();
                     break;
                 } else if(choice == 0){
+                    _teamA.empty();
+                    _teamB.empty();
                     running = false;
                     break;
                 } else {

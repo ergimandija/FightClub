@@ -26,7 +26,7 @@ void Character::recieveEffect(EffectType type, int amount){
                 break;
             case HEAL:
                 if(_hp == 100){
-                    std::cout << _name << " already has Full HP" << amount << std::endl;
+                    std::cout << _name << " already has Full HP" << std::endl;
                 } else {
                     std::cout << _name << "'s HP got healed by " << amount << std::endl;
                     _hp = (_hp+amount>100)?100:_hp+amount;

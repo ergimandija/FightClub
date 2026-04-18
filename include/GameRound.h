@@ -3,13 +3,17 @@
 #include "Team.h"
 #include "BattleContext.h"
 #include "Character.h"
+#include <SFML/Graphics.hpp>
+
 class GameRound
 {
     public:
         GameRound();
         GameRound(Team& teamA, Team& teamB);
         virtual ~GameRound();
-        void executeTurn();
+        void renderTeam(sf::RenderWindow& window, Team& team, float xPosition);
+        void renderField(sf::RenderWindow& window,sf::Texture& texture);
+        void executeTurn(sf::RenderWindow& window);
         bool getGameStatus() const;
         void setGameStatus(bool val);
 
