@@ -26,21 +26,21 @@ void GameRound::setGameStatus(bool val) {
 
 void GameRound::renderField(sf::RenderWindow& window, sf::Texture& texture){
         sf::RectangleShape field({1600.f, 800.f});
-        field.setFillColor(sf::Color(255, 255, 0));
-        field.setTextureRect(sf::IntRect({0, 0} , {1600 * 6, 800 * 6}));
+        //field.setFillColor(sf::Color(255, 255, 0));
+        field.setTextureRect(sf::IntRect({0, 0} , {1600, 800}));
         field.setTexture(&texture);
         window.draw(field);
 }
 
 void GameRound::renderTeam(sf::RenderWindow& window, Team& team, float xPosition, bool mirror) {
     float characterHeight = 200.f;
-    float spacing = 20.f;
+    //float spacing = 20.f;
     float startY = 50.f;
 
     for (int i = 0; i < team.getMemberCounter(); i++) {
         sf::RectangleShape character({200.f, characterHeight});
         Character* c = dynamic_cast<Character*>(team.getMember(i));
-        float y = startY + i * (characterHeight + spacing);
+        float y = startY + i * (characterHeight);
         character.setPosition({xPosition, y});
         character.setTexture(&(c->getTexture()));
         if(mirror){
@@ -74,7 +74,7 @@ void GameRound::executeTurn(sf::RenderWindow& window)
 {
     BattleContext ctx = BattleContext(_teamA, _teamB);
 
-    sf::Texture texture("sand.png");
+    sf::Texture texture("field.png");
 
     texture.setRepeated(true);
 

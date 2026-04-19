@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36">
   <diagram name="Page-1" id="7x-ZSTs2Ev3JtqmORqxR">
-    <mxGraphModel dx="1889" dy="1625" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2027" dy="1695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -61,7 +61,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="oFDp6oHXIVLvANjA8YVL-21" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CharacterClass" vertex="1">
-          <mxGeometry height="216" width="230" x="490" y="640" as="geometry" />
+          <mxGeometry height="138" width="230" x="490" y="640" as="geometry" />
         </mxCell>
         <mxCell id="oFDp6oHXIVLvANjA8YVL-23" parent="oFDp6oHXIVLvANjA8YVL-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- skills: ISkill[]" vertex="1">
           <mxGeometry height="26" width="230" y="26" as="geometry" />
@@ -77,15 +77,6 @@
         </mxCell>
         <mxCell id="GNO9Q6G24Sxv_xRUMdDX-20" parent="oFDp6oHXIVLvANjA8YVL-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getSkillTexture(): String" vertex="1">
           <mxGeometry height="26" width="230" y="112" as="geometry" />
-        </mxCell>
-        <mxCell id="GNO9Q6G24Sxv_xRUMdDX-22" parent="oFDp6oHXIVLvANjA8YVL-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getRecieveTexture(): String" vertex="1">
-          <mxGeometry height="26" width="230" y="138" as="geometry" />
-        </mxCell>
-        <mxCell id="GNO9Q6G24Sxv_xRUMdDX-21" parent="oFDp6oHXIVLvANjA8YVL-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getDeathTexture(): String" vertex="1">
-          <mxGeometry height="26" width="230" y="164" as="geometry" />
-        </mxCell>
-        <mxCell id="GNO9Q6G24Sxv_xRUMdDX-25" parent="oFDp6oHXIVLvANjA8YVL-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getDefaultTexture(): String" vertex="1">
-          <mxGeometry height="26" width="230" y="190" as="geometry" />
         </mxCell>
         <mxCell id="oFDp6oHXIVLvANjA8YVL-24" edge="1" parent="1" source="oFDp6oHXIVLvANjA8YVL-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;startSize=21;" target="oFDp6oHXIVLvANjA8YVL-21">
           <mxGeometry relative="1" as="geometry">
@@ -118,7 +109,7 @@
         <mxCell id="oFDp6oHXIVLvANjA8YVL-34" edge="1" parent="1" source="oFDp6oHXIVLvANjA8YVL-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;startSize=21;entryX=0.49;entryY=1.035;entryDx=0;entryDy=0;entryPerimeter=0;" target="oFDp6oHXIVLvANjA8YVL-28">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1162" y="790" />
+              <mxPoint x="1162" y="760" />
             </Array>
             <mxPoint x="1163.1100000000001" y="484.4680000000003" as="targetPoint" />
           </mxGeometry>
@@ -224,6 +215,7 @@
               <mxPoint x="925" y="880" />
               <mxPoint x="605" y="880" />
             </Array>
+            <mxPoint x="760" y="830" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_LHytj91ha4fkJVhphAu-30" edge="1" parent="1" source="a3cmbYxSk2MAb8MiBzZD-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
