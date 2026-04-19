@@ -32,68 +32,113 @@ void GameRound::renderField(sf::RenderWindow& window, sf::Texture& texture){
         window.draw(field);
 }
 
-void GameRound::renderTeam(sf::RenderWindow& window, Team& team, float xPosition) {
+void GameRound::renderTeam(sf::RenderWindow& window, Team& team, float xPosition, bool mirror) {
     float characterHeight = 200.f;
     float spacing = 20.f;
     float startY = 50.f;
 
     for (int i = 0; i < team.getMemberCounter(); i++) {
         sf::RectangleShape character({200.f, characterHeight});
-        character.setFillColor(sf::Color(0, 255, 0));
-
+        Character* c = dynamic_cast<Character*>(team.getMember(i));
         float y = startY + i * (characterHeight + spacing);
         character.setPosition({xPosition, y});
-
+        character.setTexture(&(c->getTexture()));
+        if(mirror){
+           character.setScale({-1.f, 1.f});
+        }
         window.draw(character);
     }
 }
 
-void GameRound::executeTurn(sf::RenderWindow& window){
-    BattleContext ctx = BattleContext(_teamA,_teamB);
+void GameRound::resetAliveCharacters()
+{
+    Team* teams[2] = { &_teamA, &_teamB };
+
+    for (int t = 0; t < 2; t++)
+    {
+        Team& team = *teams[t];
+
+        for (int i = 0; i < team.getMemberCounter(); i++)
+        {
+            Character* c = dynamic_cast<Character*>(team.getMember(i));
+
+            if (c && c->isAlive())
+            {
+
+                c->setDefaultTexture();
+            }
+        }
+    }
+}
+void GameRound::executeTurn(sf::RenderWindow& window)
+{
+    BattleContext ctx = BattleContext(_teamA, _teamB);
+
     sf::Texture texture("sand.png");
-    window.clear();
+
     texture.setRepeated(true);
 
-    this->renderField(window, texture);
-    this->renderTeam(window,_teamA,400.f);
-    this->renderTeam(window,_teamB,1200.f);
-    window.display();
-    std::cout << "----------------- " << _teamA.getTeamName() << "'s Turn -----------------" << std::endl;
-    for(int i=0;i<_teamA.getMemberCounter();i++){
-            if(_teamB.getAliveMemberCounter() > 0){
+    auto handleEvents = [&]()
+    {
+        while (auto event = window.pollEvent())
+        {
+            if (event->is<sf::Event::Closed>())
+                window.close();
+        }
+    };
 
-                Character* c = dynamic_cast<Character*>(_teamA.getMember(i));
-                if(c->isAlive()){
-                  c->performSkill(ctx);
-                }
-                window.clear();
-                this->renderField(window, texture);
-                this->renderTeam(window,_teamA,400.f);
-                this->renderTeam(window,_teamB,400.f);
-                window.display();
-            } else {
-                _teamB.lose();
-                _teamA.win();
+    auto render = [&](Team& left, Team& right)
+    {
+        window.clear();
+        handleEvents();
+
+        this->renderField(window, texture);
+        this->renderTeam(window, left, 400.f, false);
+        this->renderTeam(window, right, 1200.f, true);
+
+        window.display();
+    };
+
+
+    Team* teams[2] = { &_teamA, &_teamB };
+    render(_teamA, _teamB);
+    for (int t = 0; t < 2; t++)
+    {
+        Team& current = *teams[t];
+        Team& enemy   = *teams[1 - t];
+
+        if (enemy.getAliveMemberCounter() <= 0)
+        {
+            current.win();
+            enemy.lose();
+            _isFinished = true;
+            return;
+        }
+
+        std::cout << "----------------- "
+                  << current.getTeamName()
+                  << "'s Turn -----------------\n";
+
+        for (int i = 0; i < current.getMemberCounter(); i++)
+        {
+            if (enemy.getAliveMemberCounter() <= 0)
+            {
+                current.win();
+                enemy.lose();
                 _isFinished = true;
                 return;
             }
-    }
 
-    std::cout << "----------------- " << _teamB.getTeamName() << "'s Turn -----------------" << std::endl;
-     for(int i=0;i<_teamB.getMemberCounter();i++){
-            if(_teamA.getAliveMemberCounter()> 0){
-            Character* c = dynamic_cast<Character*>(_teamB.getMember(i));
-            if(c->isAlive()){
-            c->performSkill(ctx);
-            }
-            window.clear();
-            window.display();
-              } else {
-                _teamB.win();
-                _teamA.lose();
-                _isFinished = true;
-                return;
-            }
-    }
+            Character* c = dynamic_cast<Character*>(current.getMember(i));
 
+            if (c && c->isAlive())
+            {
+                 resetAliveCharacters();
+                c->performSkill(ctx);
+                render(_teamA, _teamB);
+            }
+
+
+        }
+    }
 }

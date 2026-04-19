@@ -11,11 +11,12 @@ class GameRound
         GameRound();
         GameRound(Team& teamA, Team& teamB);
         virtual ~GameRound();
-        void renderTeam(sf::RenderWindow& window, Team& team, float xPosition);
+        void renderTeam(sf::RenderWindow& window, Team& team, float xPosition,  bool mirror);
         void renderField(sf::RenderWindow& window,sf::Texture& texture);
         void executeTurn(sf::RenderWindow& window);
         bool getGameStatus() const;
         void setGameStatus(bool val);
+        void resetAliveCharacters();
 
     protected:
 

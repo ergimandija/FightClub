@@ -4,6 +4,7 @@
 #include "ISkillUser.h"
 #include <iostream>
 #include "BattleContext.h"
+#include <SFML/Graphics.hpp>
 
 class Character: public ISkillUser
 {
@@ -17,13 +18,18 @@ class Character: public ISkillUser
         void setHP(int amount) override;
         void setStatus(bool status) override;
         int getHP() const override;
-    protected:
+        CharacterClass* getClass() const;
+        void setTexture(sf::Texture texture);
+        sf::Texture& getTexture();
         CharacterClass* _class;
         std::string _name;
+        void setDefaultTexture();
+
     private:
 
         int _hp;
         bool _isAlive;
+        sf::Texture _texture;
 
 };
 

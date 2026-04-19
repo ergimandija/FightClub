@@ -6,6 +6,7 @@ Character::Character(std::string name, int hp,  CharacterClass* chclass)
     _hp = hp;
     _class = chclass;
     _isAlive = true;
+    _texture = sf::Texture(_class->getTexturePath()+ ".png");
 }
 
 Character::~Character()
@@ -13,7 +14,24 @@ Character::~Character()
     delete _class;
 }
 
+sf::Texture& Character::getTexture(){
+            return _texture;
+}
+
+CharacterClass* Character::getClass() const{
+        return _class;
+}
+
+void Character::setTexture(sf::Texture texture){
+        _texture = texture;
+}
+
+void Character::setDefaultTexture(){
+        _texture = sf::Texture(_class->getTexturePath()+ ".png");
+}
+
 void Character::recieveEffect(EffectType type, int amount){
+        this->setTexture(sf::Texture(_class->getTexturePath()+ "_recieve.png"));
         switch(type) {
             case DAMAGE:
                 std::cout << _name << " took " << amount << " Damage" << std::endl;
@@ -21,6 +39,7 @@ void Character::recieveEffect(EffectType type, int amount){
                 _hp = (_hp-amount>0)?_hp-amount:0;
                 if(_hp <= 0){
                     std::cout << _name << " got defeated!" << std::endl;
+                    this->setTexture(sf::Texture(_class->getTexturePath()+ "_dead.png"));
                     _isAlive = false;
                 }
                 break;
@@ -60,7 +79,9 @@ void Character::performSkill(BattleContext& ctx){
         std::cout << "Index invalid please give 0 or 1 for the Skills" << std::endl;
     } else {
     std::cout << _name << " uses ";
+    this->setTexture(sf::Texture(_class->getTexturePath()+ "_skill.png"));
     _class->getSkills()[index]->use(this,ctx);
+
     finished = true;
     }
     }

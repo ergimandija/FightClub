@@ -8,10 +8,11 @@ public:
     CharacterClass();
     virtual ~CharacterClass();
     ISkill* const* getSkills() const;
-
+    std::string getTexturePath() const;
 
 protected:
     ISkill* skills[2];
+    std::string _texturePath;
 private:
 
 

@@ -2,6 +2,7 @@
 
 Custom::Custom()
 {
+    _texturePath = "sprites/Custom";
     int choice;
 
     std::cout << "Choose 2 skills for your custom character:" << std::endl;

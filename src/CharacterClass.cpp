@@ -16,3 +16,8 @@ CharacterClass::~CharacterClass()
 ISkill* const* CharacterClass::getSkills() const {
     return skills;
 }
+
+
+std::string CharacterClass::getTexturePath() const {
+    return _texturePath;
+}
